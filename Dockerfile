@@ -10,3 +10,19 @@ RUN phpbrew switch $phpVersion
 RUN phpbrew ext install gd
 
 RUN ln -s /etc/php5/cli/conf.d/30-xdebug.ini /root/.phpbrew/php/$phpVersion/var/db/xdebug.ini
+
+RUN composer global require drush/drush:7.*
+
+RUN mkdir ~/drush8 && \
+    cd ~/drush8 && \
+    composer require "drush/drush:8.*"
+RUN mkdir ~/drush7 && \
+    cd ~/drush7 && \
+    composer require "drush/drush:7.*"
+RUN mkdir ~/drush6 && \
+    cd ~/drush7 && \
+    composer require "drush/drush:6.*"
+
+RUN alias drush6='~/drush6/vendor/bin/drush' && \
+    alias drush7='~/drush7/vendor/bin/drush' && \
+    alias drush8='~/drush8/vendor/bin/drush'
