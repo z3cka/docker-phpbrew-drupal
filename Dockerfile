@@ -23,6 +23,7 @@ RUN mkdir ~/drush6 && \
     cd ~/drush7 && \
     composer require "drush/drush:6.*"
 
-RUN alias drush6='~/drush6/vendor/bin/drush' && \
-    alias drush7='~/drush7/vendor/bin/drush' && \
-    alias drush8='~/drush8/vendor/bin/drush'
+RUN ln -s /root/drush6/vendor/bin/drush /usr/local/bin/drush6 && \
+    ln -s /root/drush7/vendor/bin/drush /usr/local/bin/drush  && \
+    ln -s /root/drush7/vendor/bin/drush /usr/local/bin/drush7 && \
+    ln -s /root/drush8/vendor/bin/drush /usr/local/bin/drush8
