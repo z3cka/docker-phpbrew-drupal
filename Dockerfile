@@ -27,3 +27,6 @@ RUN ln -s /root/drush6/vendor/bin/drush /usr/local/bin/drush6 && \
     ln -s /root/drush7/vendor/bin/drush /usr/local/bin/drush  && \
     ln -s /root/drush7/vendor/bin/drush /usr/local/bin/drush7 && \
     ln -s /root/drush8/vendor/bin/drush /usr/local/bin/drush8
+
+# Add mysql-client as a nice to have
+RUN apt update && apt install mysql-client
