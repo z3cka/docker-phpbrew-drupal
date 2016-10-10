@@ -5,7 +5,7 @@ MAINTAINER Casey Grzecka <c@sey.gr>
 ARG phpVersion="php-5.6.26"
 ENV PHPBREW_PHP $phpVersion
 
-RUN phpbrew install $phpVersion +default +curl +mysql
+RUN phpbrew install $phpVersion +default +apxs2 +curl +mysql
 RUN phpbrew switch $phpVersion
 RUN phpbrew ext install gd
 
