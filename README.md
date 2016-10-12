@@ -5,5 +5,5 @@ Builds a container that runs c9 with all the php requirements _(the mysql you ar
 ## Based On
 ``|--``[z3cka/DebiaNVM](https://hub.docker.com/r/z3cka/debianvm/)  
 ``|...`--``[z3cka/c9](https://hub.docker.com/r/z3cka/c9/)  
-``|.......`--``[z3cka/c9php](https://hub.docker.com/r/z3cka/c9-php/)  
-``|...........`--``[z3cka/c9phpdrupal](https://hub.docker.com/r/z3cka/c9-phpbrew-drupal/) _(this repo)_
+``|.......`--``[z3cka/c9-php](https://hub.docker.com/r/z3cka/c9-php/)  
+``|...........`--``[z3cka/c9-phpbrew-drupal](https://hub.docker.com/r/z3cka/c9-phpbrew-drupal/) _(this repo)_
